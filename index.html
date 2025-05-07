@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Playground</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Event Handling Section -->
+    <section>
+      <button class="magic-button" onclick="handleClick()">
+        Click Magic! ✨
+      </button>
+      <div class="hover-box" onmouseover="showHover()" onmouseout="hideHover()">
+        Hover over me!
+      </div>
+      <input type="text" id="keyInput" placeholder="Press any key..." />
+      <div class="secret" id="secretMessage">🎉 You found the secret!</div>
+    </section>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/31925744/pexels-photo-31925744/free-photo-of-scenic-lithuanian-quarry-surrounded-by-pines.jpeg?auto=compress&cs=tinysrgb&w=600" alt=" first image" />
+      <img src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&w=600" alt="second image" />
+      <img src="https://images.pexels.com/photos/8961066/pexels-photo-8961066.jpeg?auto=compress&cs=tinysrgb&w=600" alt="third image" />
+    </div>
+
+    <!-- Tabs -->
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button onclick="openTab(event, 'tab1')" class="active">Tab 1</button>
+        <button onclick="openTab(event, 'tab2')">Tab 2</button>
+      </div>
+      <div id="tab1" class="tab-content active">Content for Tab 1 �</div>
+      <div id="tab2" class="tab-content">Content for Tab 2 ✨</div>
+    </div>
+
+    <!-- Form Validation -->
+    <form onsubmit="return validateForm()">
+      <input type="text" id="username" placeholder="Username" required />
+      <br />
+      <br />
+      <input type="email" id="email" placeholder="Email" required />
+      <br />
+      <br />
+      <input
+        type="password"
+        id="password"
+        placeholder="Password (min 8 chars)"
+        required
+      />
+      <br/>
+      <br/>
+      <button type="submit">Submit</button>
+      <div id="error" style="color: red"></div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
